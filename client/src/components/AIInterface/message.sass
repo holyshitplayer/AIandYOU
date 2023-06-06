@@ -1,0 +1,88 @@
+@import "../../assets/fonts/fonts"
+
+body
+    &#light
+        .ai-interface-message-image
+            .ai-interface-button
+                background: linear-gradient(136.29deg, rgba(255, 255, 255, 0.5) 13.25%, rgba(255, 255, 255, 0.5) 82.63%)
+                &:hover
+                    filter: brightness(0.9)
+                    background: linear-gradient(136.29deg, rgba(255, 255, 255, 0.5) 13.25%, rgba(255, 255, 255, 0.5) 82.63%)
+    &#dark
+        .ai-interface-message-image
+            .ai-interface-button
+                background: linear-gradient(136.29deg, rgba(0, 0, 0, 0.5) 13.25%, rgba(0, 0, 0, 0.5) 82.63%)
+                &:hover
+                    filter: brightness(1.2)
+                    background: linear-gradient(136.29deg, rgba(0, 0, 0, 0.5) 13.25%, rgba(0, 0, 0, 0.5) 82.63%)
+
+.ai-interface-message
+    width: 100%
+    display: flex
+    flex-direction: column
+    gap: 6px
+    margin-top: 24px
+    &:first-child
+        margin-top: 0
+
+.ai-interface-message-author
+    margin: 0
+    line-height: 1
+    +mSemiBold
+
+.ai-interface-message-text
+    margin: 0
+    line-height: 24px
+
+.ai-interface-message-images
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 16px
+
+.ai-interface-message-image
+    position: relative
+    img
+        aspect-ratio: 1/1
+        width: 100%
+        height: 100%
+        object-fit: cover
+        border-radius: 16px
+        display: block
+    .ai-interface-message-image-buttons
+        position: absolute
+        right: 8px
+        top: 8px
+        display: flex
+        gap: 4px
+    .ai-interface-button
+        width: 36px
+        height: 36px
+        border-radius: 12px
+        backdrop-filter: blur(10px)
+        filter: brightness(1)
+        transition: filter .15s ease
+        svg
+            max-width: 16px
+            max-height: 16px
+            width: 100%
+            border-radius: 0
+
+@media (max-width: 768px)
+    .ai-interface-message-images
+        grid-template-columns: repeat(2, 1fr)
+        gap: 16px
+
+@media (max-width: 576px)
+    .ai-interface-message
+        gap: 4px
+        margin-top: 16px
+    .ai-interface-message-images
+        grid-template-columns: repeat(2, 1fr)
+        gap: 8px
+    .ai-interface-message-image
+        .ai-interface-button
+            width: 36px
+            height: 36px
+            svg
+                max-width: 14px
+                max-height: 14px

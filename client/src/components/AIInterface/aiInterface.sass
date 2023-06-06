@@ -1,0 +1,90 @@
+@import "../../assets/fonts/fonts"
+
+.ai-usage-columns
+    display: grid
+    grid-template-columns: 1fr 2fr
+    gap: 48px
+
+.ai-usage-info
+    display: flex
+    flex-direction: column
+    gap: 32px
+
+.ai-usage-header
+    display: flex
+    flex-direction: column
+    gap: 16px
+
+.ai-usage-title
+    margin: 0
+    font-size: 36px
+    text-transform: uppercase
+    +cBold
+
+.ai-usage-description
+    margin: 0
+
+.ai-usage-link
+    align-self: start
+    border-bottom: 1px solid transparent
+    transition: border-color .15s ease
+    +mSemiBold
+
+body
+    &#light
+        .ai-interface
+            background: linear-gradient(136.29deg, rgba(0, 0, 0, 0.04) 13.25%, rgba(0, 0, 0, 0.06) 82.63%)
+        .ai-usage-link
+            &:hover
+                border-color: #1E1D1E
+    &#dark
+        .ai-interface
+            background: linear-gradient(136.29deg, rgba(255, 255, 255, 0.04) 13.25%, rgba(255, 255, 255, 0.06) 82.63%)
+        .ai-usage-link
+            &:hover
+                border-color: #DFE5EA
+
+.ai-interface
+    width: 100%
+    max-height: 650px
+    min-height: 600px
+    padding: 32px
+    border-radius: 16px
+    box-shadow: 0px 4px 16px -1px rgba(0, 0, 0, 0.2)
+    backdrop-filter: blur(10px)
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+.ai-interface-control-panel
+    margin-top: 32px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    gap: 16px
+
+@media (max-width: 768px)
+    .ai-usage-columns
+        grid-template-columns: 1fr
+        gap: 32px
+    .ai-usage-chapter
+        display: none
+    .ai-interface
+        min-height: 550px
+        max-height: 600px
+
+@media (max-width: 576px)
+    .ai-usage-title
+        font-size: 28px
+    .ai-usage-header
+        gap: 12px
+    .ai-usage-description, .ai-usage-link
+        font-size: 14px
+    .ai-interface
+        gap: 16px
+        font-size: 14px
+        padding: 16px
+    .ai-interface-control-panel
+        margin-top: 0
+        display: block
+        position: relative

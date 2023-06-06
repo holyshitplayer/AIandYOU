@@ -1,0 +1,197 @@
+@import "../../assets/fonts/fonts"
+
+.first-screen
+    display: grid
+    align-items: flex-start
+    grid-template-columns: repeat(2, 1fr)
+    gap: 48px
+
+.big-title
+    font-size: 72px
+    line-height: 100px
+    text-transform: uppercase
+    margin: 0
+    max-width: 600px
+    +cRegular
+    img
+        border-radius: 32px
+        height: 64px
+        width: 128px
+        margin-left: 24px
+        transform: translateY(4px)
+
+.image-div
+    img
+        display: block
+        width: 100%
+        height: 100%
+        object-fit: contain
+        border-radius: 16px
+
+.big-poster
+    img
+        max-height: 360px
+        filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.4))
+
+.small-poster
+    img
+        max-height: 180px
+
+.get-started-block
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 48px
+    filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.2))
+
+.get-started-info
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: flex-start
+
+.get-started-text
+    margin: 0
+    font-size: 14px
+    letter-spacing: 0.5px
+    text-transform: uppercase
+    +mRegular
+
+body
+    &#light
+        .get-started-link
+            background: linear-gradient(136.29deg, rgba(0, 0, 0, 0.04) 13.25%, rgba(0, 0, 0, 0.06) 82.63%)
+            &:hover
+                filter: brightness(0.95)
+    &#dark
+        .get-started-link
+            background: linear-gradient(136.29deg, rgba(255, 255, 255, 0.04) 13.25%, rgba(255, 255, 255, 0.06) 82.63%)
+            &:hover
+                filter: brightness(1.1)
+
+
+.get-started-link
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 16px 32px
+    box-shadow: 0px 4px 16px -1px rgba(0, 0, 0, 0.2)
+    backdrop-filter: blur(10px)
+    border-radius: 16px
+    position: relative
+    filter: brightness(1)
+    transition: filter .15s ease
+    span
+        +mSemiBold
+    svg
+        position: absolute
+        width: 12px
+        right: 12px
+        top: 12px
+
+.decoration-block
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 48px
+    align-items: flex-start
+
+body
+    &#light
+        .decoration-text-block
+            background: linear-gradient(136.29deg, rgba(0, 0, 0, 0.04) 13.25%, rgba(0, 0, 0, 0.06) 82.63%)
+    &#dark
+        .decoration-text-block
+            background: linear-gradient(136.29deg, rgba(255, 255, 255, 0.04) 13.25%, rgba(255, 255, 255, 0.06) 82.63%)
+
+.decoration-text-block
+    border-radius: 16px
+    padding: 32px
+    box-shadow: 0px 4px 16px -1px rgba(0, 0, 0, 0.2)
+    backdrop-filter: blur(10px)
+    line-height: 25.5px
+    position: relative
+    p
+        margin: 0
+
+.decoration-block-link
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 16px
+    width: 52px
+    height: 44px
+    box-shadow: 0px 4px 12px -1px rgba(0, 0, 0, 0.15)
+    backdrop-filter: blur(10px)
+    position: absolute
+    top: 0
+    right: 0
+    transition: box-shadow .15s ease
+    &:hover
+        box-shadow: 0px 4px 16px -1px rgba(0, 0, 0, 0.2)
+    svg
+        width: 15px
+
+.decoration-console-block
+    border-radius: 16px
+    padding: 32px
+    background: #1E1D1E
+    color: #F0F4F7
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25)
+    +jbmMedium
+    code
+        p
+            margin: 0
+
+@media (max-width: 768px)
+    .big-title
+        font-size: 40px
+        line-height: 64px
+        img
+            width: 96px
+            height: 48px
+            margin-left: 16px
+            transform: translateY(8px)
+    .first-screen
+        gap: 32px
+    .big-poster
+        img
+            height: 180px
+    .get-started-block, .decoration-block
+        grid-template-columns: 1fr
+        gap: 32px
+    .get-started-info, .decoration-console-block
+        order: 1
+    .small-poster, .decoration-text-block
+        order: 2
+    .get-started-info
+        gap: 32px
+    .footer-items
+        margin-bottom: 32px
+
+@media (max-width: 576px)
+    .first-screen
+        grid-template-columns: 1fr
+    .big-title
+        order: 2
+        font-size: 40px
+        line-height: 48px
+        img
+            width: 80px
+            height: 40px
+    .big-poster
+        order: 1
+    .get-started-block
+        order: 3
+    .decoration-block
+        order: 4
+    .get-started-info
+        gap: 16px
+    .small-poster
+        display: none
+    .decoration-text-block
+        display: none
+    .get-started-link
+        font-size: 14px
+        padding: 12px 32px
+        svg
+            right: 8px
+            top: 8px

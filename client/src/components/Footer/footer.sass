@@ -1,0 +1,83 @@
+@import "../../assets/fonts/fonts"
+
+.footer-items
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 48px
+
+.footer-title
+    margin: 0
+    color: #8C8C8C
+    font-size: 14px
+    text-transform: uppercase
+    +mSemiBold
+
+.footer-menu
+    ul
+        padding: 0
+        margin: 0
+        list-style-type: none
+        display: flex
+        align-items: center
+        gap: 12px
+        li
+            display: flex
+            align-items: center
+            gap: 12px
+            &::after
+                content: ""
+                height: 16px
+                width: 1px
+                background-color: #8C8C8C
+                display: block
+            &:last-child::after
+                opacity: 0
+
+.quick-links
+    display: flex
+    flex-direction: column
+    gap: 16px
+
+body
+    &#light
+        .quick-link:hover
+            border-color: #1E1D1E
+    &#dark
+        .quick-link:hover
+            border-color: #DFE5EA
+
+.quick-link
+    font-size: 14px
+    border-bottom: 1px solid transparent
+    transition: border-color .15s ease
+    +mSemiBold
+
+.copyright
+    display: flex
+    gap: 12px
+
+.copyright-info
+    display: flex
+    flex-direction: column
+    gap: 16px
+
+.copyright-title
+    margin: 0
+
+.copyright-text
+    margin: 0
+    font-size: 14px
+
+.qrcode
+    height: 56.8px
+
+@media (max-width: 768px)
+    footer
+        padding-top: 32px
+    .footer-items
+        margin-bottom: 32px
+
+@media (max-width: 576px)
+    .quick-links
+        display: none

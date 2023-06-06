@@ -1,0 +1,34 @@
+@import "../../assets/fonts/fonts"
+
+body
+    &#light
+        .dropdown-item:hover
+            background-color: rgba(0, 0, 0, 0.075)
+    &#dark
+        .dropdown-item:hover
+            background-color: rgba(255, 255, 255, 0.075)
+
+.dropdown-item
+    border: none
+    outline: none
+    background-color: transparent
+    display: flex
+    align-items: center
+    gap: 8px
+    padding: 4px 12px
+    font-size: 14px
+    width: 100%
+    border-radius: 4px
+    cursor: pointer
+    transition: background-color .15s ease
+    +mRegular
+    svg
+        width: 20px
+        height: 16px
+
+@media (max-width: 768px)
+    .dropdown-item
+        padding: 4px 8px
+        svg
+            width: 16px
+            height: 16px

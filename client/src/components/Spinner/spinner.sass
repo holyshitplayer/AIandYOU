@@ -1,0 +1,20 @@
+.loading
+    animation: spin 2000ms infinite linear
+    transform-origin: center center
+
+.spinner
+    display: flex
+    justify-content: center
+    align-items: center
+
+#root > .spinner
+    height: 100vh
+    svg
+        width: 32px
+        height: 32px
+
+@keyframes spin
+    from
+        transform: rotate(0deg)
+    to
+        transform: rotate(1turn)

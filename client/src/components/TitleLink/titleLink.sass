@@ -1,0 +1,25 @@
+.title-link
+    display: flex
+    align-items: center
+    gap: 8px
+    cursor: pointer
+    svg
+        opacity: 0
+        visibility: hidden
+        transition: opacity .15s ease, visibility .15s ease
+    &:hover
+        svg
+            opacity: 1
+            visibility: visible
+    &.docs-title, &.ai-usage-title
+        svg
+            width: 24px
+    &.chapter-title
+        svg
+            width: 20px
+
+@media (max-width: 576px)
+    .title-link
+        &.chapter-title
+            svg
+                width: 16px

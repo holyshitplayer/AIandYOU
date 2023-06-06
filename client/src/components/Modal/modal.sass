@@ -1,0 +1,316 @@
+@import "../../assets/fonts/fonts"
+
+body
+    &#light
+        .modal
+            background: linear-gradient(252.85deg, #F0F4F7 0%, #DCE4EE 50.83%, #F0F4F7 100%)
+        .modal-header
+            border-bottom: 1px solid #1E1D1E
+        .modal-close
+            background-color: transparent
+            &:hover
+                background-color: rgba(0, 0, 0, 0.05)
+        input, .modal-fake-input
+            background-color: rgba(0, 0, 0, 0.05)
+            &:focus
+                background-color: #C2C9D1
+        .modal-form
+            button
+                background-color: rgba(0, 0, 0, 0.05)
+                &:hover
+                    background-color: rgba(0, 0, 0, 0.1)
+        .modal-community-post
+            button
+                background: linear-gradient(136.29deg, rgba(255, 255, 255, 0.5) 13.25%, rgba(255, 255, 255, 0.5) 82.63%)
+                &:hover
+                    filter: brightness(0.9)
+                    background: linear-gradient(136.29deg, rgba(255, 255, 255, 0.5) 13.25%, rgba(255, 255, 255, 0.5) 82.63%)
+    &#dark
+        .modal
+            background: linear-gradient(180deg, #2D2F35 0%, #24262D 0.01%, #101216 100%)
+        .modal-header
+            border-bottom: 1px solid #DFE5EA
+        .modal-close
+            background-color: transparent
+            &:hover
+                background-color: rgba(255, 255, 255, 0.05)
+            &:disabled
+                &:hover
+                    background-color: transparent
+                svg
+                    opacity: 0.5
+        input, .modal-fake-input
+            background-color: rgba(255, 255, 255, 0.05)
+            &:focus
+                background-color: #393A3F
+        .modal-form
+            button
+                background-color: rgba(255, 255, 255, 0.05)
+                &:hover
+                    background-color: rgba(255, 255, 255, 0.1)
+        .modal-community-post
+            button
+                background: linear-gradient(136.29deg, rgba(0, 0, 0, 0.5) 13.25%, rgba(0, 0, 0, 0.5) 82.63%)
+                &:hover
+                    filter: brightness(1.2)
+                    background: linear-gradient(136.29deg, rgba(0, 0, 0, 0.5) 13.25%, rgba(0, 0, 0, 0.5) 82.63%)
+
+.modal-overlay
+    opacity: 0
+    visibility: hidden
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, .5)
+    z-index: 102
+    transition: opacity .15s ease, visibility .15s ease
+    &.active
+        opacity: 1
+        visibility: visible
+
+.modal-wrapper
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 103
+    opacity: 0
+    visibility: hidden
+    transition: opacity .15s ease, visibility .15s ease
+    &.active
+        opacity: 1
+        visibility: visible
+
+.modal
+    min-width: 400px
+    max-width: calc(100% - 96px * 2)
+    max-height: 85%
+    padding: 32px
+    border-radius: 16px
+    box-shadow: 0px 4px 16px -1px rgba(0, 0, 0, 0.2)
+    backdrop-filter: blur(10px)
+    overflow-y: auto
+
+.modal-header
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    height: 48px
+    margin-bottom: 32px
+
+.modal-title
+    margin: 0
+    font-size: 16px
+    text-transform: capitalize
+    +mSemiBold
+
+.modal-close
+    border-radius: 16px
+    position: absolute
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+    width: 48px
+    height: 48px
+    border: none
+    outline: none
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    object-fit: contain
+    transition: background-color .15s ease, filter .15s ease
+    svg
+        width: 16px
+        height: 16px
+        width: 100%
+
+.modal-form
+    display: flex
+    flex-direction: column
+    max-width: 350px
+    label
+        font-size: 14px
+        margin-bottom: 4px
+    input, .modal-fake-input
+        width: 100%
+        margin-bottom: 16px
+        border: none
+        outline: none
+        font-size: 16px
+        border-radius: 16px
+        padding: 12px 16px
+        transition: background-color .15s ease
+        +mRegular
+    img
+        width: 100%
+        aspect-ratio: 1/1
+        border-radius: 16px
+    button
+        border-radius: 16px
+        border: none
+        outline: none
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        cursor: pointer
+        object-fit: contain
+        transition: background-color .15s ease
+        +mSemiBold
+
+.modal-form-button-wrapper
+    height: 44px
+    display: flex
+    justify-content: center
+    align-items: center
+
+.modal-form-text
+    margin: 16px 0 8px 0
+    font-size: 12px
+
+.modal-error
+    text-align: center
+    font-size: 14px
+    cursor: default
+
+.modal-fake-input
+    margin: 0
+    cursor: default
+    span
+        opacity: 0.85
+
+.modal-community-library
+    display: grid
+    width: 100%
+    gap: 32px 16px
+    grid-template-columns: repeat(3, 1fr)
+
+.modal-community-post-image
+    aspect-ratio: 1/1
+    width: 100%
+    height: 100%
+    object-fit: cover
+    border-radius: 16px
+    display: block
+
+.modal-community-post
+    position: relative
+    &:hover, &:active
+        .modal-community-post-info
+            opacity: 1
+            visibility: visible
+    button
+        position: absolute
+        right: 8px
+        top: 8px
+        border-radius: 12px
+        width: 40px
+        height: 40px
+        backdrop-filter: blur(10px)
+        filter: brightness(1)
+        transition: filter .15s ease
+        svg
+            max-width: 16px
+            max-height: 16px
+            width: 100%
+            border-radius: 0
+
+.modal-community-post-title
+    margin: 0
+    font-size: 14px
+
+.modal-community-post-author
+    margin: 0
+    font-size: 14px
+    +mSemiBold
+
+.modal-community-post-info
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    padding: 16px
+    border-radius: 16px
+    color: #DFE5EA
+    display: flex
+    flex-direction: column
+    background: linear-gradient(136.29deg, rgba(0, 0, 0, 0.5) 13.25%, rgba(0, 0, 0, 0.7) 82.63%)
+    box-shadow: 0px 4px 16px -1px rgba(0, 0, 0, 0.2)
+    backdrop-filter: blur(10px)
+    gap: 4px
+    cursor: default
+    opacity: 0
+    visibility: hidden
+    transition: opacity .15s linear, visibility .15s linear
+
+.modal-body > .spinner
+    svg
+        height: 24px
+        width: 24px
+
+@media (max-width: 768px)
+    .modal
+        max-width: 90%
+    .modal-community-library
+        grid-template-columns: repeat(2, 1fr)
+
+@media (max-width: 576px)
+    .modal
+        max-width: 90%
+        min-width: auto
+    .modal-header
+        height: 40px
+    .modal-title
+        font-size: 14px
+    .modal-close
+        width: 40px
+        height: 40px
+        svg
+            width: 14px
+            height: 14px
+    .modal-community-library
+        gap: 16px
+        grid-template-columns: 1fr
+    .modal-community-post
+        button
+            width: 36px
+            height: 36px
+            svg
+                max-width: 14px
+                max-height: 14px
+    .modal-community-post-title
+        font-size: 10px
+        overflow: hidden
+        text-overflow: ellipsis
+    .modal-community-post-author
+        font-size: 12px
+    .modal-community-post-info
+        padding: 12px
+        max-height: 50%
+    .modal-body > .spinner
+        svg
+            height: 20px
+            width: 20px
+    .modal-form
+        max-width: 100%
+        label
+            font-size: 12px
+        input, .modal-fake-input
+            font-size: 14px
+    .modal-form-button-wrapper
+        height: 40px
+
+@media (max-width: 375px)
+    .modal
+        padding: 16px
+    .modal-header
+        justify-content: flex-start

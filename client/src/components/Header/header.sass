@@ -1,0 +1,71 @@
+@import "../../assets/fonts/fonts"
+
+header
+    height: 96px
+    .container
+        height: 100%
+
+body
+    &#light
+        .header-items
+            border-bottom: 1px solid #1E1D1E
+        .header-button:hover
+            span
+                border-color: #1E1D1E
+        .header-logo:hover
+            border-color: #1E1D1E
+    &#dark
+        .header-items
+            border-bottom: 1px solid #DFE5EA
+        .header-button:hover
+            span
+                border-color: #DFE5EA
+        .header-logo:hover
+            border-color: #DFE5EA
+
+.header-items
+    height: 100%
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    align-items: center
+
+.header-button
+    padding: 0
+    display: flex
+    align-items: center
+    gap: 8px
+    font-size: 14px
+    border: none
+    outline: none
+    background-color: transparent
+    cursor: pointer
+    justify-self: start
+    +mSemiBold
+    span
+        border-bottom: 1px solid transparent
+        transition: border-color .15s ease
+    svg
+        margin-bottom: 4px
+
+.header-logo
+    justify-self: center
+    border-bottom: 1px solid transparent
+    padding-bottom: 3px
+    transition: border-color .15s ease
+
+.header-functions
+    display: flex
+    align-items: center
+    gap: 32px
+    justify-self: end
+
+@media (max-width: 576px)
+    header
+        height: 72px
+    .header-logo
+        display: none
+    .header-functions
+        gap: 16px
+    .header-items
+        grid-template-columns: repeat(2, 1fr)
+        justify-content: space-between

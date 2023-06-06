@@ -1,0 +1,43 @@
+body
+    &#light
+        .ai-interface-button
+            background-color: rgba(0, 0, 0, 0.05)
+            &:hover
+                background-color: rgba(0, 0, 0, 0.1)
+    &#dark
+        .ai-interface-button
+            background-color: rgba(255, 255, 255, 0.05)
+            &:hover
+                background-color: rgba(255, 255, 255, 0.1)
+
+.ai-interface-button
+    padding: 0
+    width: 52px
+    height: 52px
+    border-radius: 16px
+    border: none
+    outline: none
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+    object-fit: contain
+    transition: background-color .15s ease
+    svg
+        width: 16px
+        height: 16px
+
+@media (max-width: 576px)
+    body
+        &#light, &#dark
+            .ai-interface-button
+                background-color: transparent
+                &:hover
+                    background-color: transparent
+    .ai-interface-button
+        width: 32px
+        height: 42px
+        border-radius: 16px
+        svg
+            width: 14px
+            height: 14px

@@ -1,0 +1,59 @@
+@font-face {
+	font-family: 'Comfortaa Regular';
+	src: local('./Comfortaa'), local('./Comfortaa-Regular'),
+		url('./Comfortaa-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Comfortaa Bold';
+	src: local('./Comfortaa'), local('./Comfortaa-Bold'),
+		url('./Comfortaa-Bold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Mont Regular';
+	src: local('./Mont'), local('./Mont-Regular'),
+		url('./Mont-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Mont SemiBold';
+	src: local('./Mont'), local('./Mont-SemiBold'),
+		url('./Mont-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'JetBrains Mono Medium';
+	src: local('./JetBrains Mono'), local('./JetBrainsMono-Medium'),
+		url('./JetBrainsMono-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@mixin cRegular {
+    font-family: 'Comfortaa Regular', sans-serif;
+}
+
+@mixin cBold {
+    font-family: 'Comfortaa Bold', sans-serif;
+}
+
+@mixin mRegular {
+    font-family: 'Mont Regular', sans-serif;
+}
+
+@mixin mSemiBold {
+    font-family: 'Mont SemiBold', sans-serif;
+}
+
+@mixin jbmMedium {
+    font-family: 'JetBrains Mono Medium', monospace;
+}
