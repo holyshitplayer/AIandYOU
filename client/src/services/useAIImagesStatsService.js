@@ -3,7 +3,7 @@ import { useHttp } from "../hooks";
 const useAIImagesStatsService = () => {
     const { loading, request, error, clearError } = useHttp();
 
-    const _apiBase = "http://localhost:8080/api/v1/ai-images-stats";
+    const _apiBase = "http://16.171.76.4:8080/api/v1/ai-images-stats";
 
     const getAIImagesStats = async () => {
         const response = await request(_apiBase, "GET");
