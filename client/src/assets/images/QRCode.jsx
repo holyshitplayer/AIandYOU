@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const QRCode = ({ className }) => (
     <svg className={className} x="0" y="0" viewBox="0 0 310 310" fill="none" xmlns="http://www.w3.org/2000/svg">

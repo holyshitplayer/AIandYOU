@@ -1,8 +1,8 @@
-import { Button } from './';
+import { Button } from "./";
 
 import "./buttons.sass";
 
-import { CleanIcon, CommunityIcon, DownloadIcon } from '../../assets';
+import { CleanIcon, CommunityIcon, DownloadIcon } from "../../assets";
 
 const Buttons = ({ type, setCommunityModalOpened, downloadChatLog, cleanChatLog }) => {
     const renderButtons = () => {

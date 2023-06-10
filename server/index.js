@@ -25,7 +25,7 @@ app.use("/api/v1/ai-images-stats", aiImagesStatsRoutes);
 const startServer = async () => {
     try {
         connectDB(process.env.MONGODB_URL);
-        app.listen(5000, () => console.log("API Server has started on port http://16.171.76.4:5000"));
+        app.listen(process.env.API_SERVER_PORT, () => console.log(`API Server has started on port ${process.env.API_SERVER_PORT}`));
     } catch (error) {
         console.log(error);
     }

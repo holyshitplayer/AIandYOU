@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const AIImagesPageIcon = ({ className }) => (
     <svg className={className} width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">

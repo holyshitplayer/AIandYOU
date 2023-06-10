@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const HomePageIcon = ({ className }) => (
     <svg className={className} width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">

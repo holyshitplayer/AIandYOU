@@ -1,20 +1,21 @@
 const express = require("express");
 const cors = require("cors");
+const dotenv = require("dotenv");
+
+dotenv.config();
 
 const app = express();
 app.use(cors());
 
-// Обслуживание статических файлов
 app.use(express.static("./build"));
 
-// Обработка всех запросов, которые не сопоставляются с другими маршрутами
 app.get("*", async (req, res) => {
     res.sendFile("index.html", { root: "./build" });
 });
 
 const startServer = async () => {
     try {
-        app.listen(3000, () => console.log("Client Server has started on port http://16.171.76.4:3000"));
+        app.listen(process.env.CLIENT_SERVER_PORT, () => console.log(`Client Server has started on port ${process.env.CLIENT_SERVER_PORT}`));
     } catch (error) {
         console.log(error);
     }

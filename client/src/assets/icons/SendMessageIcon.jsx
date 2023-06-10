@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const SendMessageIcon = ({ className }) => (
     <svg className={className} width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
