@@ -12,7 +12,7 @@ app.get("*", async (req, res) => {
 
 const startServer = async () => {
     try {
-        app.listen(3000, () => console.log("Client Server has started on port http://localhost:3000"));
+        app.listen(3000, () => console.log("Client Server has started on port http://16.171.76.4:3000"));
     } catch (error) {
         console.log(error);
     }
