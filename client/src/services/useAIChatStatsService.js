@@ -3,7 +3,7 @@ import { useHttp } from "../hooks";
 const useAIChatStatsService = () => {
     const { loading, request, error, clearError } = useHttp();
 
-    const _apiBase = "http://16.171.76.4:8080/api/v1/ai-chat-stats";
+    const _apiBase = "http://localhost:5000/api/v1/ai-chat-stats";
 
     const getAIChatStats = async () => {
         const response = await request(_apiBase, "GET");

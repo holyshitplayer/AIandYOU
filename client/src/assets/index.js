@@ -1,7 +1,7 @@
 import Logo from "./images/Logo";
 import HeadingGif from "./images/first-screen/heading-decoration.gif";
-import BigImage from "./images/first-screen/big-image.png";
-import SmallImage from "./images/first-screen/small-image.png";
+import BigImage from "./images/first-screen/big-image.webp";
+import SmallImage from "./images/first-screen/small-image.webp";
 import QRCode from "./images/QRCode";
 import GetStartedBackground from "./images/docs-backgrounds/get-started.webp";
 import ModernAIBackground from "./images/docs-backgrounds/modern-ai.webp";
@@ -17,6 +17,8 @@ import GitHubCopilotBackground from "./images/docs-backgrounds/copilot.webp";
 import MidjourneyBackground from "./images/docs-backgrounds/midjourney.webp";
 import AIChatBackground from "./images/docs-backgrounds/ai-chat.webp";
 import AIImagesBackground from "./images/docs-backgrounds/ai-images.webp";
+import PopulatiryDiagram from "./images/diagrams/popularity.webp";
+import NumberOfLostJobsDiagram from "./images/diagrams/lost-jobs.webp";
 
 import MenuIcon from "./icons/MenuIcon";
 import LanguagesIcon from "./icons/LanguagesIcon";
@@ -64,6 +66,8 @@ export {
     MidjourneyBackground,
     AIChatBackground,
     AIImagesBackground,
+    PopulatiryDiagram,
+    NumberOfLostJobsDiagram,
 
     MenuIcon,
     LanguagesIcon,

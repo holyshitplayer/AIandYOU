@@ -21,6 +21,13 @@ const Content = ({ title, description, headerBg, chapters }) => {
                 );
             case "img":
                 return <img key={idx} className="chapter-image" src={value.src} alt={value.alt} />
+            case "imgWithCaption":
+                return (
+                    <div key={idx} className="chapter-image-with-caption">
+                        <img key={idx} className="chapter-image" src={value.src} alt={value.alt} />
+                        <p className="chapter-caption">{t(value.valueKey)}</p>
+                    </div>
+                );
             case "a":
                 return <a key={idx} className="chapter-link" href={value.href} target="_blank" rel="noopener noreferrer">{t(value.valueKey)}</a>
             case "link":

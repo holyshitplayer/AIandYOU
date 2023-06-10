@@ -12,6 +12,8 @@ import {
     HowItWorksBackground,
     MidjourneyBackground,
     ModernAIBackground,
+    NumberOfLostJobsDiagram,
+    PopulatiryDiagram,
     StableDiffusionBackground
 } from "../assets";
 
@@ -115,6 +117,12 @@ export const pagesContent = {
                         valueKey: "modernAIChapter1Value1"
                     },
                     {
+                        type: "imgWithCaption",
+                        src: PopulatiryDiagram,
+                        alt: "ai popularity diagram",
+                        valueKey: "modernAIChapter1Diagram1"
+                    },
+                    {
                         type: "p",
                         valueKey: "modernAIChapter1Value2"
                     },
@@ -215,6 +223,12 @@ export const pagesContent = {
                     {
                         type: "p",
                         valueKey: "modernAIChapter4Value3"
+                    },
+                    {
+                        type: "imgWithCaption",
+                        src: NumberOfLostJobsDiagram,
+                        alt: "number of lost jobs diagram",
+                        valueKey: "modernAIChapter4Diagram1"
                     },
                     {
                         type: "p",

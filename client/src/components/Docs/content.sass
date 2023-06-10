@@ -71,6 +71,26 @@
         aspect-ratio: unset
         filter: brightness(0.9)
 
+.chapter-image-with-caption
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    gap: 8px
+    img
+        width: auto
+        max-width: 100%
+        max-height: 450px
+        object-fit: contain
+        aspect-ratio: unset
+        filter: brightness(1)
+
+.chapter-caption
+    margin: 0 0 8px 0
+    font-size: 14px
+    text-align: center
+    +mSemiBold
+
 body
     &#light
         .chapter-link:hover
@@ -109,3 +129,5 @@ body
     .chapter-text, .chapter-link
         font-size: 14px
         line-height: 20px
+    .chapter-caption
+        font-size: 12px
