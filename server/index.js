@@ -22,10 +22,6 @@ app.use("/api/v1/post", postRoutes);
 app.use("/api/v1/ai-chat-stats", aiChatStatsRoutes);
 app.use("/api/v1/ai-images-stats", aiImagesStatsRoutes);
 
-app.get("/", async (req, res) => {
-    res.send("Hello from AI & YOU!");
-});
-
 const startServer = async () => {
     try {
         connectDB(process.env.MONGODB_URL);
