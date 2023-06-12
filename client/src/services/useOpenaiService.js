@@ -3,7 +3,7 @@ import { useHttp } from "../hooks";
 const useOpenaiService = () => {
     const { loading, request, error, clearError } = useHttp();
 
-    const _apiBase = "https://aiandyou.tech/api/v1/";
+    const _apiBase = "http://localhost:5000/api/v1/";
 
     const getOpenAiAnswer = async (type, prompt) => {
         switch (type) {

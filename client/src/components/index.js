@@ -6,6 +6,7 @@ export { default as ScrollToHash } from "./ScrollToHash/ScrollToHash";
 export { default as Alert } from "./Alert/Alert";
 export { default as Spinner } from "./Spinner/Spinner";
 export { default as Modal } from "./Modal/Modal";
+export { default as ScrollToTop } from "./ScrollToTop/ScrollToTop";
 
 export { Dropdown } from "./Dropdown";
 export { Item as DropdownItem } from "./Dropdown";

@@ -4,18 +4,17 @@ import "./buttons.sass";
 
 import { CleanIcon, CommunityIcon, DownloadIcon } from "../../assets";
 
-const Buttons = ({ type, setCommunityModalOpened, downloadChatLog, cleanChatLog }) => {
+const Buttons = ({ type, setCommunityModalOpened, downloadChatLog, cleanChatLog, chatLogLength }) => {
     const renderButtons = () => {
         let buttons = [];
 
-        if (type === "images") {
+        if (type === "chat") {
+            buttons.push(<Button key="download" onClick={downloadChatLog} disabled={chatLogLength === 0} icon={<DownloadIcon />} />);
+        } else if (type === "images") {
             buttons.push(<Button key="community" onClick={() => setCommunityModalOpened(true)} icon={<CommunityIcon />} />);
         }
 
-        buttons.push(
-            <Button key="download" onClick={downloadChatLog} icon={<DownloadIcon />} />,
-            <Button key="clean" onClick={cleanChatLog} icon={<CleanIcon />} />
-        );
+        buttons.push(<Button key="clean" onClick={cleanChatLog} disabled={chatLogLength === 0} icon={<CleanIcon />} />);
 
         return buttons;
     }

@@ -4,6 +4,8 @@
     display: flex
     justify-content: space-between
     align-items: center
+    flex-wrap: wrap
+    gap: 32px
     margin-bottom: 48px
 
 .footer-title
@@ -72,11 +74,13 @@ body
 .qrcode
     height: 56.8px
 
-@media (max-width: 768px)
+@media (max-width: 992px)
     footer
         padding-top: 32px
     .footer-items
         margin-bottom: 32px
+    .quick-links
+        width: 100%
 
 @media (max-width: 576px)
     .quick-links

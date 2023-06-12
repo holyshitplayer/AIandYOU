@@ -9,7 +9,8 @@ import {
     AboutUsPageIcon,
     AIChatPageIcon,
     AIImagesPageIcon,
-    HomePageIcon
+    HomePageIcon,
+    ContactsPageIcon
 } from "../assets";
 
 export const docsLinks = [
@@ -89,7 +90,12 @@ export const headerLinks = [
         icon: HomePageIcon
     },
     ...docsLinks,
-    ...chatLinks
+    ...chatLinks,
+    {
+        titleKey: pagesContent.contacts.titleKey,
+        href: "/docs/about-us#contacts",
+        icon: ContactsPageIcon
+    }
 ];
 
 export const footerLinks = [
@@ -98,5 +104,9 @@ export const footerLinks = [
         href: "/"
     },
     docsLinks[0],
-    ...chatLinks
+    ...chatLinks,
+    {
+        titleKey: pagesContent.contacts.titleKey,
+        href: "/docs/about-us#contacts"
+    }
 ];

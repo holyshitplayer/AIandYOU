@@ -23,6 +23,7 @@ const AIUsage = ({ pageContent, type }) => {
                             <div className="ai-usage-header">
                                 <TitleLink type="h3" text={t(pageContent.titleKey)} className="ai-usage-title" />
                                 <p className="ai-usage-description">{t(pageContent.descriptionKey)}</p>
+                                <p className="ai-usage-description">{t(pageContent.docsCaptionKey)}</p>
                                 <NavLink to={pageContent.docsLink.href} className="ai-usage-link">{t(pageContent.docsLink.valueKey)}</NavLink>
                                 <AIUsageStats type={type} setUpdateStats={setUpdateStats} />
                             </div>

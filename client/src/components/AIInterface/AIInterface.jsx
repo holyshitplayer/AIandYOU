@@ -84,7 +84,7 @@ const AIInterface = ({ type, updateStats }) => {
             </div>
             <div className={`ai-interface-control-panel ${type}`}>
                 <FormField type={type} loading={loading} error={error} onFormSubmit={onFormSubmit} placeholder={placeholder} />
-                <Buttons type={type} setShareImageModalOpened={setShareImageModalOpened} setCommunityModalOpened={setCommunityModalOpened} downloadChatLog={downloadChatLog} cleanChatLog={cleanChatLog} />
+                <Buttons type={type} setShareImageModalOpened={setShareImageModalOpened} setCommunityModalOpened={setCommunityModalOpened} downloadChatLog={downloadChatLog} cleanChatLog={cleanChatLog} chatLogLength={chatLog.length} />
             </div>
         </div>
 

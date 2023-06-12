@@ -36,6 +36,7 @@ import ExamplesPageIcon from "./icons/ExamplesPageIcon";
 import AboutUsPageIcon from "./icons/AboutUsPageIcon";
 import AIChatPageIcon from "./icons/AIChatPageIcon";
 import AIImagesPageIcon from "./icons/AIImagesPageIcon";
+import ContactsPageIcon from "./icons/ContactsPageIcon";
 import CopyTitleLinkIcon from "./icons/CopyTitleLink";
 import SendMessageIcon from "./icons/SendMessageIcon";
 import DownloadIcon from "./icons/DownloadIcon";
@@ -45,6 +46,7 @@ import LoadingIcon from "./icons/LoadingIcon";
 import RestartIcon from "./icons/RestartIcon";
 import CommunityIcon from "./icons/CommunityIcon";
 import CloseIcon from "./icons/CloseIcon";
+import ScrollToTopIcon from "./icons/ScrollToTopIcon";
 
 export {
     Logo,
@@ -85,6 +87,7 @@ export {
     AboutUsPageIcon,
     AIChatPageIcon,
     AIImagesPageIcon,
+    ContactsPageIcon,
     CopyTitleLinkIcon,
     SendMessageIcon,
     DownloadIcon,
@@ -93,5 +96,6 @@ export {
     LoadingIcon,
     RestartIcon,
     CommunityIcon,
-    CloseIcon
+    CloseIcon,
+    ScrollToTopIcon
 }

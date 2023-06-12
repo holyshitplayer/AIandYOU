@@ -50,6 +50,13 @@
     flex-direction: column
     gap: 16px
 
+.chapter-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    gap: 4px
+
 .chapter-title
     margin: 0
     font-size: 24px
@@ -93,23 +100,53 @@
 
 body
     &#light
-        .chapter-link:hover
-            border-color: #1E1D1E
+        .chapter-link, .chapter-contact-value
+            background-color: rgba(0, 0, 0, 0.05)
+            &:hover
+                background-color: rgba(0, 0, 0, 0.1)
+            &.interface
+                background-color: rgba(0, 0, 0, 0.85)
+                color: #DFE5EA
+                &:hover
+                    background-color: rgba(0, 0, 0, 0.75)
     &#dark
-        .chapter-link:hover
-            border-color: #DFE5EA
+        .chapter-link, .chapter-contact-value
+            background-color: rgba(255, 255, 255, 0.05)
+            &:hover
+                background-color: rgba(255, 255, 255, 0.1)
+            &.interface
+                background-color: rgba(255, 255, 255, 0.85)
+                color: #1E1D1E
+                &:hover
+                    background-color: rgba(255, 255, 255, 0.65)
 
 .chapter-link
-    align-self: start
-    border-bottom: 1px solid transparent
-    transition: border-color .15s ease
+    padding: 5.2px 12px
+    border-radius: 4px
+    transition: background-color .15s ease
     +mSemiBold
 
-@media (max-width: 768px)
+.chapter-contact
+    display: flex
+    align-items: center
+    column-gap: 12px
+    flex-wrap: wrap
+
+.chapter-contact-title
+    margin: 0
+
+.chapter-contact-value
+    border-radius: 4px
+    padding: 4px 12px
+
+@media (max-width: 992px)
     .docs-menu
         display: none
     .docs-columns
         grid-template-columns: 1fr
+    .chapter-header
+        flex-direction: column
+        align-items: flex-start
 
 @media (max-width: 576px)
     .docs-header
@@ -126,8 +163,12 @@ body
         gap: 8px
     .chapter-title
         font-size: 16px
-    .chapter-text, .chapter-link
+    .chapter-text, .chapter-link, .chapter-contact
         font-size: 14px
         line-height: 20px
     .chapter-caption
         font-size: 12px
+    .chapter-contact
+        column-gap: 4px
+    .chapter-contact-value
+        padding: 4px 8px

@@ -359,6 +359,11 @@ export const pagesContent = {
             {
                 titleKey: "aiToolsChapter1Title",
                 id: "chat-gpt",
+                link: {
+                    type: "a",
+                    href: "https://chat.openai.com/",
+                    valueKey: "aiToolsChapter1Value12",
+                },
                 content: [
                     {
                         type: "img",
@@ -408,17 +413,17 @@ export const pagesContent = {
                     {
                         type: "p",
                         valueKey: "aiToolsChapter1Value11"
-                    },
-                    {
-                        type: "a",
-                        href: "https://chat.openai.com/",
-                        valueKey: "aiToolsChapter1Value12"
                     }
                 ]
             },
             {
                 titleKey: "aiToolsChapter2Title",
                 id: "dall-e-2",
+                link: {
+                    type: "a",
+                    href: "https://labs.openai.com/",
+                    valueKey: "aiToolsChapter2Value12"
+                },
                 content: [
                     {
                         type: "img",
@@ -468,17 +473,17 @@ export const pagesContent = {
                     {
                         type: "ol",
                         valueKey: "aiToolsChapter2Value11"
-                    },
-                    {
-                        type: "a",
-                        href: "https://labs.openai.com/",
-                        valueKey: "aiToolsChapter2Value12"
                     }
                 ]
             },
             {
                 titleKey: "aiToolsChapter3Title",
                 id: "deepltranslator",
+                link: {
+                    type: "a",
+                    href: "https://www.deepl.com/translator",
+                    valueKey: "aiToolsChapter3Value11"
+                },
                 content: [
                     {
                         type: "img",
@@ -524,17 +529,17 @@ export const pagesContent = {
                     {
                         type: "p",
                         valueKey: "aiToolsChapter3Value10"
-                    },
-                    {
-                        type: "a",
-                        href: "https://www.deepl.com/translator",
-                        valueKey: "aiToolsChapter3Value11"
                     }
                 ]
             },
             {
                 titleKey: "aiToolsChapter4Title",
                 id: "stablediffusion",
+                link: {
+                    type: "a",
+                    href: "https://stablediffusionweb.com/",
+                    valueKey: "aiToolsChapter4Value11"
+                },
                 content: [
                     {
                         type: "img",
@@ -580,17 +585,17 @@ export const pagesContent = {
                     {
                         type: "ol",
                         valueKey: "aiToolsChapter4Value10"
-                    },
-                    {
-                        type: "a",
-                        href: "https://stablediffusionweb.com/",
-                        valueKey: "aiToolsChapter4Value11"
                     }
                 ]
             },
             {
                 titleKey: "aiToolsChapter5Title",
                 id: "githubcopilot",
+                link: {
+                    type: "a",
+                    href: "https://github.com/features/copilot",
+                    valueKey: "aiToolsChapter5Value12"
+                },
                 content: [
                     {
                         type: "img",
@@ -640,17 +645,17 @@ export const pagesContent = {
                     {
                         type: "p",
                         valueKey: "aiToolsChapter5Value11"
-                    },
-                    {
-                        type: "a",
-                        href: "https://github.com/features/copilot",
-                        valueKey: "aiToolsChapter5Value12"
                     }
                 ]
             },
             {
                 titleKey: "aiToolsChapter6Title",
                 id: "midjourney",
+                link: {
+                    type: "a",
+                    href: "https://www.midjourney.com/",
+                    valueKey: "aiToolsChapter6Value7"
+                },
                 content: [
                     {
                         type: "img",
@@ -680,11 +685,6 @@ export const pagesContent = {
                     {
                         type: "p",
                         valueKey: "aiToolsChapter5Value6"
-                    },
-                    {
-                        type: "a",
-                        href: "https://www.midjourney.com/",
-                        valueKey: "aiToolsChapter6Value7"
                     }
                 ]
             }
@@ -708,6 +708,11 @@ export const pagesContent = {
             {
                 titleKey: "examplesChapter2Title",
                 id: "ai-chat",
+                link: {
+                    type: "link",
+                    href: "/ai-chat",
+                    valueKey: "examplesChapter2Value11"
+                },
                 content: [
                     {
                         type: "img",
@@ -753,17 +758,17 @@ export const pagesContent = {
                     {
                         type: "ol",
                         valueKey: "examplesChapter2Value10"
-                    },
-                    {
-                        type: "link",
-                        href: "/ai-chat",
-                        valueKey: "examplesChapter2Value11"
                     }
                 ]
             },
             {
                 titleKey: "examplesChapter3Title",
                 id: "ai-images",
+                link: {
+                    type: "link",
+                    href: "/ai-images",
+                    valueKey: "examplesChapter3Value11"
+                },
                 content: [
                     {
                         type: "img",
@@ -809,11 +814,6 @@ export const pagesContent = {
                     {
                         type: "ol",
                         valueKey: "examplesChapter3Value10"
-                    },
-                    {
-                        type: "link",
-                        href: "/ai-images",
-                        valueKey: "examplesChapter3Value11"
                     }
                 ]
             },
@@ -849,15 +849,67 @@ export const pagesContent = {
                         valueKey: "aboutUsChapter1Value5"
                     }
                 ]
+            },
+            {
+                titleKey: "aboutUsChapter2Title",
+                id: "contacts",
+                content: [
+                    {
+                        type: "p",
+                        valueKey: "aboutUsChapter2Value1"
+                    },
+                    {
+                        type: "p",
+                        valueKey: "aboutUsChapter2Value2"
+                    },
+                    {
+                        type: "p",
+                        valueKey: "aboutUsChapter2Value3"
+                    },
+                    {
+                        type: "contact",
+                        titleKey: "aboutUsContact1Title",
+                        contactType: "telegram",
+                        contactValue: "holyshitplayer"
+                    },
+                    {
+                        type: "contact",
+                        titleKey: "aboutUsContact2Title",
+                        contactType: "phone",
+                        contactValue: "+380 66 121 71 99"
+                    },
+                    {
+                        type: "contact",
+                        titleKey: "aboutUsContact3Title",
+                        contactType: "email",
+                        contactValue: "nemirdota@gmail.com"
+                    },
+                    {
+                        type: "p",
+                        valueKey: "aboutUsChapter2Value4"
+                    },
+                    {
+                        type: "p",
+                        valueKey: "aboutUsChapter2Value5"
+                    },
+                    {
+                        type: "p",
+                        valueKey: "aboutUsChapter2Value6"
+                    }
+                ]
             }
         ]
     },
     "home": {
         titleKey: "homePageTitle",
     },
+    "contacts": {
+        titleKey: "aboutUsChapter2Title",
+    },
     "aiChat": {
         titleKey: "aiChatPageTitle",
         descriptionKey: "aiChatPageDescription",
+        docsCaptionKey: "aiChatDocsCaption",
         docsLink: {
             href: "/docs/examples#ai-chat",
             valueKey: "aiChatDocsLink"
@@ -866,6 +918,7 @@ export const pagesContent = {
     "aiImages": {
         titleKey: "aiImagesPageTitle",
         descriptionKey: "aiImagesPageDescription",
+        docsCaptionKey: "aiImagesDocsCaption",
         docsLink: {
             href: "/docs/examples#ai-images",
             valueKey: "aiImagesDocsLink"

@@ -4,16 +4,26 @@ body
             background-color: rgba(0, 0, 0, 0.05)
             &:hover
                 background-color: rgba(0, 0, 0, 0.1)
+            &:disabled
+                &:hover
+                    background-color: rgba(0, 0, 0, 0.05)
+                svg
+                    opacity: 0.5
     &#dark
         .ai-interface-button
             background-color: rgba(255, 255, 255, 0.05)
             &:hover
                 background-color: rgba(255, 255, 255, 0.1)
+            &:disabled
+                &:hover
+                    background-color: rgba(255, 255, 255, 0.05)
+                svg
+                    opacity: 0.5
 
 .ai-interface-button
     padding: 0
-    width: 52px
-    height: 52px
+    width: 54.4px
+    height: 54.4px
     border-radius: 16px
     border: none
     outline: none
@@ -26,6 +36,8 @@ body
     svg
         width: 16px
         height: 16px
+    &:disabled
+            cursor: default
 
 @media (max-width: 576px)
     body

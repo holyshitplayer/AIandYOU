@@ -1,5 +1,6 @@
-import { ShareIcon } from "../../assets";
 import Button from "./Button";
+
+import { ShareIcon } from "../../assets";
 
 import "./message.sass";
 
