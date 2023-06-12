@@ -1,7 +1,5 @@
-import React from "react"
 import { DocsContent } from "../components"
 import { useTranslation } from "react-i18next";
-
 
 const DocsArticle = ({ pageContent }) => {
     const { t } = useTranslation();
