@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-import { BigImage, FollowLinkIcon, HeadingGif, SmallImage } from "../../assets";
+import { BigImage, FollowLinkIcon, HeadingGifWebm, HeadingGifMp4, SmallImage } from "../../assets";
 
 import "./firstScreen.sass";
 
@@ -12,7 +12,10 @@ const FirstScreen = () => {
         <section className="first-screen">
             <h1 className="big-title">
                 <span>{t("bigTitle")}</span>
-                <video src={HeadingGif} autoPlay muted loop></video>
+                <video autoPlay muted loop playsInline>
+                    <source src={HeadingGifWebm} type="video/webm" />
+                    <source src={HeadingGifMp4} type="video/mp4" />
+                </video>
             </h1>
             <div className="image-div big-poster">
                 <link rel="preload" href={BigImage} as="image" />

@@ -1,5 +1,6 @@
 import Logo from "./images/Logo";
-import HeadingGif from "./images/first-screen/heading-decoration.webm";
+import HeadingGifWebm from "./images/first-screen/heading-decoration.webm";
+import HeadingGifMp4 from "./images/first-screen/heading-decoration.mp4";
 import BigImage from "./images/first-screen/big-image.webp";
 import SmallImage from "./images/first-screen/small-image.webp";
 import QRCode from "./images/QRCode";
@@ -50,7 +51,8 @@ import ScrollToTopIcon from "./icons/ScrollToTopIcon";
 
 export {
     Logo,
-    HeadingGif,
+    HeadingGifWebm,
+    HeadingGifMp4,
     BigImage,
     SmallImage,
     QRCode,
