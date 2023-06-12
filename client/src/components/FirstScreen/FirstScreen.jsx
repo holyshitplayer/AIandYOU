@@ -12,9 +12,10 @@ const FirstScreen = () => {
         <section className="first-screen">
             <h1 className="big-title">
                 <span>{t("bigTitle")}</span>
-                <img src={HeadingGif} alt="heading gif" />
+                <video src={HeadingGif} autoPlay muted loop></video>
             </h1>
             <div className="image-div big-poster">
+                <link rel="preload" href={BigImage} as="image" />
                 <img src={BigImage} alt="big poster" />
             </div>
             <div className="get-started-block">

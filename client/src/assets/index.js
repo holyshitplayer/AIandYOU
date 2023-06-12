@@ -1,5 +1,5 @@
 import Logo from "./images/Logo";
-import HeadingGif from "./images/first-screen/heading-decoration.gif";
+import HeadingGif from "./images/first-screen/heading-decoration.webm";
 import BigImage from "./images/first-screen/big-image.webp";
 import SmallImage from "./images/first-screen/small-image.webp";
 import QRCode from "./images/QRCode";

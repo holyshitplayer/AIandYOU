@@ -1,4 +1,5 @@
 const express = require("express");
+const expressStaticGzip = require("express-static-gzip");
 const cors = require("cors");
 const dotenv = require("dotenv");
 
@@ -7,7 +8,9 @@ dotenv.config();
 const app = express();
 app.use(cors());
 
-app.use(express.static("./build"));
+app.use("/", expressStaticGzip("./build", {
+    enableBrotli: true
+}));
 
 app.get("*", async (req, res) => {
     res.sendFile("index.html", { root: "./build" });
