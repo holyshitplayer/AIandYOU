@@ -3,7 +3,7 @@ import { useHttp } from "../hooks";
 const useCloudinaryService = () => {
     const { loading, request, error, clearError } = useHttp();
 
-    const _apiBase = "http://localhost:5000/api/v1/post";
+    const _apiBase = "https://aiandyou.tech/api/v1/post";
 
     const getAllPosts = async () => {
         const response = await request(_apiBase, "GET");
