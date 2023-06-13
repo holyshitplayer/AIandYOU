@@ -28,7 +28,7 @@ const Footer = () => {
                         <QRCode className="qrcode" />
                         <div className="copyright-info">
                             <p className="copyright-title footer-title">{t("copyrightTitle")}</p>
-                            <p className="copyright-text">{t("copyrightText")}</p>
+                            <p className="copyright-text">{t("copyrightText")}, {new Date().getFullYear()}</p>
                         </div>
                     </div>
                 </div>
