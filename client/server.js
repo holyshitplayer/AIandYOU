@@ -9,7 +9,17 @@ const app = express();
 app.use(cors());
 
 app.use("/", expressStaticGzip("./build", {
-    enableBrotli: true
+    enableBrotli: true,
+    orderPreference: ["br", "gz"],
+    serveStatic: {
+        setHeaders: (res, path) => {
+            if (path.endsWith(".html")) {
+                res.setHeader("Cache-Control", "public, max-age=0");
+            } else {
+                res.setHeader("Cache-Control", `public, max-age=${30 * 24 * 60 * 60}`);
+            }
+        }
+    }
 }));
 
 app.get("*", async (req, res) => {
