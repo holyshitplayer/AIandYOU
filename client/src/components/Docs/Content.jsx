@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import ScrollToBottom from "react-scroll-to-bottom";
 
 import { ScrollToTop, TitleLink } from "..";
 
@@ -34,10 +33,10 @@ const Content = ({ title, description, headerBg, chapters }) => {
                     <div key={idx} className="chapter-contact">
                         <p className="chapter-contact-title">{t(value.titleKey)}:</p>
                         {value.contactType === "telegram"
-                        ? <a className="chapter-contact-value" href={`https://t.me/${value.contactValue}`} target="_blank" rel="noopener noreferrer">@{value.contactValue}</a>
-                        : value.contactType === "phone"
-                        ? <a className="chapter-contact-value" href={`tel:${value.contactValue.replace(/\s/g, '')}`}>{value.contactValue}</a>
-                        : <a className="chapter-contact-value" href={`mailto:${value.contactValue}`}>{value.contactValue}</a>}
+                            ? <a className="chapter-contact-value" href={`https://t.me/${value.contactValue}`} target="_blank" rel="noopener noreferrer">@{value.contactValue}</a>
+                            : value.contactType === "phone"
+                                ? <a className="chapter-contact-value" href={`tel:${value.contactValue.replace(/\s/g, '')}`}>{value.contactValue}</a>
+                                : <a className="chapter-contact-value" href={`mailto:${value.contactValue}`}>{value.contactValue}</a>}
                     </div>
                 );
             default:
@@ -57,11 +56,11 @@ const Content = ({ title, description, headerBg, chapters }) => {
     }
 
     return (
-        <ScrollToBottom>
+        <>
             <Helmet>
                 <title>{title} · AI & YOU</title>
             </Helmet>
-            
+
             <div className="docs-content">
                 <div className="docs-header" style={{ backgroundImage: `url(${headerBg})` }}>
                     <TitleLink type="h3" text={title} className="docs-title" />
@@ -80,7 +79,7 @@ const Content = ({ title, description, headerBg, chapters }) => {
                 </div>
                 <ScrollToTop />
             </div>
-        </ScrollToBottom>
+        </>
     );
 };
 

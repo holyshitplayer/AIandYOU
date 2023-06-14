@@ -1,4 +1,4 @@
-import React from "react";
+import { StrictMode, Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 
@@ -15,11 +15,11 @@ root.render(
     <HelmetProvider>
         <ThemeProvider>
             <AlertProvider>
-                <React.StrictMode>
-                    <React.Suspense fallback={<Spinner />}>
+                <StrictMode>
+                    <Suspense fallback={<Spinner />}>
                         <App />
-                    </React.Suspense>
-                </React.StrictMode>
+                    </Suspense>
+                </StrictMode>
             </AlertProvider>
         </ThemeProvider>
     </HelmetProvider>

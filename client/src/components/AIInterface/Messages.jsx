@@ -1,9 +1,12 @@
-import ScrollToBottom from "react-scroll-to-bottom";
+import { Suspense, lazy } from "react";
 import { useTranslation } from "react-i18next";
 
 import { Message } from "./";
 
 import "./messages.sass";
+import Spinner from "../Spinner/Spinner";
+
+const ScrollToBottom = lazy(() => import("react-scroll-to-bottom"));
 
 const Messages = ({ type, error, chatLog, setShareImageModalOpened, setImageToShare }) => {
     const { t } = useTranslation();
@@ -17,11 +20,13 @@ const Messages = ({ type, error, chatLog, setShareImageModalOpened, setImageToSh
     )) : null;
 
     return (
-        <ScrollToBottom className="scroll-to-bottom">
-            {errorMessage}
-            {placeholder}
-            {messages}
-        </ScrollToBottom>
+        <Suspense fallback={<Spinner />}>
+            <ScrollToBottom className="scroll-to-bottom">
+                {errorMessage}
+                {placeholder}
+                {messages}
+            </ScrollToBottom>
+        </Suspense>
     );
 };
 

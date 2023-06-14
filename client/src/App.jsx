@@ -1,9 +1,14 @@
+import { lazy } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
-import { HomePage, DocsPage, DocsArticlePage, AIUsagePage } from "./pages";
 import { Header, Footer, ScrollToHash, Alert } from "./components";
 import { pagesContent } from "./constants";
+
+const HomePage = lazy(() => import("./pages/Home"));
+const DocsPage = lazy(() => import("./pages/Docs"));
+const DocsArticlePage = lazy(() => import("./pages/DocsArticle"));
+const AIUsagePage = lazy(() => import("./pages/AIUsage"));
 
 const App = () => (
     <BrowserRouter>
