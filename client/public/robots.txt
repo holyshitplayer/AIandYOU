@@ -1,0 +1,5 @@
+# robots.txt file of https://aiandyou.tech/
+User-agent: *
+Allow: /
+
+Sitemap: https://aiandyou.tech/sitemap.xml
