@@ -1,9 +1,17 @@
+import { Helmet } from "react-helmet-async";
+
 import { FirstScreen } from "../components";
 
 const Home = () => (
-    <div className="container">
-        <FirstScreen />
-    </div>
+    <>
+        <Helmet>
+            <title>AI & YOU</title>
+        </Helmet>
+        
+        <div className="container">
+            <FirstScreen />
+        </div>
+    </>
 );
 
 export default Home
