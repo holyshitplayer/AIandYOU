@@ -132,7 +132,7 @@ const Stats = ({ type, setUpdateStats }) => {
     return (
         <div className="ai-usage-stats">
             {errorMessage}
-            {(!aiChatError || !aiImagesError) && renderStats()}
+            {(!aiChatError || !aiImagesError) ?? renderStats()}
         </div>
     )
 }
