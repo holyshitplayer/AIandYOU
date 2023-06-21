@@ -6,10 +6,12 @@ import { CleanIcon, CommunityIcon, DownloadIcon } from "../../assets";
 
 const Buttons = ({ type, setCommunityModalOpened, downloadChatLog, cleanChatLog, chatLogLength }) => {
     const renderButtons = () => {
+        const isApple = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
         let buttons = [];
 
         if (type === "chat") {
-            buttons.push(<Button key="download" onClick={downloadChatLog} disabled={chatLogLength === 0} icon={<DownloadIcon />} />);
+            buttons.push(<Button key="download" onClick={downloadChatLog} disabled={chatLogLength === 0 || isApple} icon={<DownloadIcon />} />);
         } else if (type === "images") {
             buttons.push(<Button key="community" onClick={() => setCommunityModalOpened(true)} icon={<CommunityIcon />} />);
         }

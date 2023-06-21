@@ -70,21 +70,20 @@ const AIInterface = ({ type, updateStats }) => {
             }
         ));
 
-        downloadJson(messages, `ai-${type}-dialog`)
-            .then((data) => {
-                updateStats.dialogDownloadsCount(1);
+        downloadJson(messages, `ai-${type}-dialog`).then((data) => {
+            const url = URL.createObjectURL(new Blob([data], { type: "application/json;charset=utf-8" }));
+            const link = document.createElement("a");
+            link.href = url;
+            const fileName = `ai-${type}-dialog`;
+            link.setAttribute('download', `${fileName}.json`);
+            document.body.appendChild(link);
+            link.click();
 
-                return new Promise(resolve => setTimeout(() => resolve(data), 250));
-            })
-            .then((data) => {
-                const url = window.URL.createObjectURL(new Blob([data]));
-                const link = document.createElement('a');
-                link.href = url;
-                const fileName = `ai-${type}-dialog`;
-                link.setAttribute('download', fileName + '.json');
-                document.body.appendChild(link);
-                link.click();
-            });
+            document.body.removeChild(link);
+            URL.revokeObjectURL(url);
+        });
+
+        updateStats.dialogDownloadsCount(1);
     }
 
     const placeholder = type === "chat" ? t("aiChatPlaceholder") : t("aiImagesPlaceholder");
