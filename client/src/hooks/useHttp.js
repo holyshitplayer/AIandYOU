@@ -18,6 +18,7 @@ const useHttp = () => {
             return data;
         } catch (error) {
             setLoading(false);
+            console.log(error.message);
             setError(error.message);
             throw error;
         }

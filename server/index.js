@@ -9,6 +9,7 @@ import imagesRoutes from "./routes/imagesRoutes.js";
 import postRoutes from "./routes/postRoutes.js";
 import aiChatStatsRoutes from "./routes/aiChatStatsRoutes.js";
 import aiImagesStatsRoutes from "./routes/aiImagesStatsRoutes.js";
+import downloadRoutes from "./routes/downloadRoutes.js";
 
 dotenv.config();
 
@@ -21,6 +22,7 @@ app.use("/api/v1/images", imagesRoutes);
 app.use("/api/v1/post", postRoutes);
 app.use("/api/v1/ai-chat-stats", aiChatStatsRoutes);
 app.use("/api/v1/ai-images-stats", aiImagesStatsRoutes);
+app.use("/api/v1/download", downloadRoutes);
 
 const startServer = async () => {
     try {

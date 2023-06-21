@@ -3,9 +3,10 @@ import { useTranslation } from "react-i18next";
 
 import { Buttons, Messages, FormField, ShareModal, CommunityModal } from "./";
 import { useOpenaiService } from "../../services";
-import { chatLogStorage, downloadAsJson } from "../../utils";
+import { chatLogStorage } from "../../utils";
 
 import "./aiInterface.sass";
+import useDownloadService from "../../services/useDownloadService";
 
 const AIInterface = ({ type, updateStats }) => {
     const { t } = useTranslation();
@@ -18,6 +19,7 @@ const AIInterface = ({ type, updateStats }) => {
     const [communityModalOpened, setCommunityModalOpened] = useState(false);
 
     const { loading, error, getOpenAiAnswer } = useOpenaiService();
+    const { downloadJson } = useDownloadService();
 
     useEffect(() => {
         setStorage(chatLogStorage(type));
@@ -68,11 +70,21 @@ const AIInterface = ({ type, updateStats }) => {
             }
         ));
 
-        downloadAsJson(messages, `ai-${type}-dialog`);
+        downloadJson(messages, `ai-${type}-dialog`)
+            .then((data) => {
+                updateStats.dialogDownloadsCount(1);
 
-        if (type === "chat") {
-            updateStats.dialogDownloadsCount(1);
-        }
+                return new Promise(resolve => setTimeout(() => resolve(data), 250));
+            })
+            .then((data) => {
+                const url = window.URL.createObjectURL(new Blob([data]));
+                const link = document.createElement('a');
+                link.href = url;
+                const fileName = `ai-${type}-dialog`;
+                link.setAttribute('download', fileName + '.json');
+                document.body.appendChild(link);
+                link.click();
+            });
     }
 
     const placeholder = type === "chat" ? t("aiChatPlaceholder") : t("aiImagesPlaceholder");
